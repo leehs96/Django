@@ -6,12 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-     {% for post in posts.all %}
-        {{forloop.counter}}<br>
-        <h1>{{ post.title }}</h1><br>
-        {{ post.pub_date }}<br>
-        {{ post.body }}<br>
-        <br><br>
-    {% endfor %}
+     <div class="container">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.pub_date }}</p>
+        <p>{{ post.body }}</p>
+    </div>
+    <a href="{% url 'home' %}">돌아가기</a>
 </body>
 </html>
